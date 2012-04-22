@@ -1,0 +1,71 @@
+<html>
+  <head>
+  	<link rel="stylesheet" href="style.css" type="text/css" />
+  	<script type="text/javascript" src="js/vendor/underscore.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/gol.js"></script>
+    <script type="text/javascript" src="js/synths.js"></script>
+    <script type="text/javascript" src="js/golrocks.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+
+  </head>
+  <body>
+  	<a href="http://github.com/cbrandolino/GoLRocks"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://a248.e.akamai.net/camo.github.com/ce742187c818c67d98af16f96ed21c00160c234a/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
+  	<h1>GoLRocks</h1>
+  	<h2>An HTML5 audio sequencer based on Conway's Game of Life</h2>
+  	<div id="container">
+	    <div id="board">
+	    </div>
+	    <div id="controls">
+	      <div id="play_controls" class="click_controls">
+	        <span data-ctrl="play">Play</span>
+	        <span data-ctrl="pause">Pause</span>
+	      </div>
+	      <div id="speed_controls">
+	        <div data-ctrl="cursor">
+	           <label for="cursor">Cursor</label>
+	           <input type="range" name="cursor" min="0" max="1200" value="240"/></span>
+	        </div>
+	        <div data-ctrl="gol">
+	           <label for="gol">Board update</label>
+	           <input type="range" name="gol" min="0" max="1200" value="120"/></span>
+	        </div>
+	      </div>
+	      <div id="synth_controls" class="click_controls">
+	        <span data-synth="ScatterWave" class="active">ScatterWave</span>
+	        <span data-synth="MozAudio">MozAudio</span>
+	      </div>
+	      <p>MozAudio only works on ff :/</p>
+	    </div>
+	    <div class="clearfix"></div>
+	    <div id="blablah">
+	      <p>
+	      	<strong>GoLRocks</strong> is an HTML5 sequencer based on <a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's <em>Game of Life</em></a>.
+	      </p>
+	      <p>
+            Add some cells; press Play; enjoy.
+	      </p>
+	      <p>
+	      	You can add new cells during execution (this will stop the execution), and you can change speeds and synth used without stopping the execution. (Alternating between synths will create some nice stuff).
+	      </p>
+	      <p>
+	      	There are two synths at the moment: <em>ScatterWave</em> is non tonal, and plays an audio file. <em>MozAudio</em> is tonal but shitty, and plays a dynamically generated sine wave which only works on Firefox.
+	      </p>
+	      <p>
+	        You can use it as a (very pretty) GoL implementation by setting the cursor speed to 0, or as a silly sequencer by setting the board
+	        update speed to 0.
+	      </p>
+	      <p>
+	        It's very extensible, in particular for what concerns the synths (which you are welcome to contribute; this project is just a one-weekend hack I did not have time for them).
+	      </p>
+	      <p>
+	      	It uses quite a lot of bleeding-edge tech, so it works almost nowhere. Chrome misses the sine generator; FF misses the speed slider.
+	      </p>
+	      <p>
+	      	Feel free to peruse the source on github and feel obliged to send me some synths. They're a cake to do; check this out: <a href="coffee/synths.coffee">Synth Guide</a>
+	      </p>
+	    </div>
+	</div>
+  </body>
+</html>
