@@ -1,7 +1,8 @@
 (function() {
   $(function() {
-    var update_speed;
+    var ffHack, update_speed;
     window.GRCtl = new GolRocks('#board', 16, 16, synths);
+    ffHack = new Audio("assets/coso.wav");
     $('#play_controls span[data-ctrl="play"]').click(function() {
       $(this).addClass('active');
       return GRCtl.start();
