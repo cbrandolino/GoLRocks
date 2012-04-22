@@ -1,6 +1,6 @@
 $ ->
-  window.GRCtl = new GolRocks '#board', 16, 16, synths
   ffHack = new Audio("assets/coso.wav")
+  window.GRCtl = new GolRocks '#board', 16, 16, synths
 
   $('#play_controls span[data-ctrl="play"]').click ->
     $(this).addClass('active')
